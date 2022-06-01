@@ -1,0 +1,41 @@
+1653973306773|4|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|drop table if exists hibernate_sequence|drop table if exists hibernate_sequence
+1653973306776|3|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|drop table if exists test|drop table if exists test
+1653973306783|3|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|create table hibernate_sequence (next_val bigint) engine=MyISAM|create table hibernate_sequence (next_val bigint) engine=MyISAM
+1653973306784|1|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|insert into hibernate_sequence values ( 1 )|insert into hibernate_sequence values ( 1 )
+1653973306787|3|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|create table test (id integer not null, data varchar(255), primary key (id)) engine=MyISAM|create table test (id integer not null, data varchar(255), primary key (id)) engine=MyISAM
+1653973314007|3|statement|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry|select next_val as id_val from hibernate_sequence for update|select next_val as id_val from hibernate_sequence for update
+1653973314014|0|statement|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry|update hibernate_sequence set next_val= ? where next_val=?|update hibernate_sequence set next_val= 2 where next_val=1
+1653973314015|0|commit|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1653973314040|1|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|insert into test (data, id) values (?, ?)|insert into test (data, id) values ('hello everybody', 1)
+1653973314043|0|commit|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1653973314084|0|commit|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1653973481000|0|statement|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry|select next_val as id_val from hibernate_sequence for update|select next_val as id_val from hibernate_sequence for update
+1653973481002|1|statement|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry|update hibernate_sequence set next_val= ? where next_val=?|update hibernate_sequence set next_val= 3 where next_val=2
+1653973481002|0|commit|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1653973481005|1|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|insert into test (data, id) values (?, ?)|insert into test (data, id) values ('hello everybody', 2)
+1653973481005|0|commit|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1653973481026|1|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|select test0_.id as id1_0_0_, test0_.data as data2_0_0_ from test test0_ where test0_.id=?|select test0_.id as id1_0_0_, test0_.data as data2_0_0_ from test test0_ where test0_.id=1
+1653973481038|0|commit|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1654050536769|37|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|drop table if exists hibernate_sequence|drop table if exists hibernate_sequence
+1654050536783|13|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|drop table if exists test|drop table if exists test
+1654050536791|4|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|create table hibernate_sequence (next_val bigint) engine=MyISAM|create table hibernate_sequence (next_val bigint) engine=MyISAM
+1654050536816|24|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|insert into hibernate_sequence values ( 1 )|insert into hibernate_sequence values ( 1 )
+1654050536820|3|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|create table test (id integer not null, data varchar(255), primary key (id)) engine=MyISAM|create table test (id integer not null, data varchar(255), primary key (id)) engine=MyISAM
+1654050563796|3|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|drop table if exists hibernate_sequence|drop table if exists hibernate_sequence
+1654050563798|1|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|drop table if exists test|drop table if exists test
+1654050563802|1|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|create table hibernate_sequence (next_val bigint) engine=MyISAM|create table hibernate_sequence (next_val bigint) engine=MyISAM
+1654050563803|0|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|insert into hibernate_sequence values ( 1 )|insert into hibernate_sequence values ( 1 )
+1654050563806|2|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|create table test (id integer not null, data varchar(255), primary key (id)) engine=MyISAM|create table test (id integer not null, data varchar(255), primary key (id)) engine=MyISAM
+1654050570882|4|statement|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry|select next_val as id_val from hibernate_sequence for update|select next_val as id_val from hibernate_sequence for update
+1654050570889|1|statement|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry|update hibernate_sequence set next_val= ? where next_val=?|update hibernate_sequence set next_val= 2 where next_val=1
+1654050570889|0|commit|connection 1|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1654050570931|4|statement|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry|insert into test (data, id) values (?, ?)|insert into test (data, id) values ('hello everybody', 1)
+1654050570934|0|commit|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1654050571196|0|commit|connection 0|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1654054226800|1|statement|connection 21|url jdbc:p6spy:mariadb://localhost:3306/sentry|select next_val as id_val from hibernate_sequence for update|select next_val as id_val from hibernate_sequence for update
+1654054226804|2|statement|connection 21|url jdbc:p6spy:mariadb://localhost:3306/sentry|update hibernate_sequence set next_val= ? where next_val=?|update hibernate_sequence set next_val= 3 where next_val=2
+1654054226804|0|commit|connection 21|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1654054226810|3|statement|connection 20|url jdbc:p6spy:mariadb://localhost:3306/sentry|insert into test (data, id) values (?, ?)|insert into test (data, id) values ('hello everybody', 2)
+1654054226811|0|commit|connection 20|url jdbc:p6spy:mariadb://localhost:3306/sentry||
+1654054226924|0|statement|connection 20|url jdbc:p6spy:mariadb://localhost:3306/sentry|select test0_.id as id1_0_0_, test0_.data as data2_0_0_ from test test0_ where test0_.id=?|select test0_.id as id1_0_0_, test0_.data as data2_0_0_ from test test0_ where test0_.id=1
+1654054226968|0|commit|connection 20|url jdbc:p6spy:mariadb://localhost:3306/sentry||
